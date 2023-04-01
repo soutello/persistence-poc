@@ -17,8 +17,8 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(ExampleNotFoundException.class)
-    protected ResponseEntity<Void> handleExampleNotFoundException(ExampleNotFoundException e) {
+    @ExceptionHandler(ProductNotFoundException.class)
+    protected ResponseEntity<Void> handleExampleNotFoundException(ProductNotFoundException e) {
         log.info("m=handleExampleNotFoundException", e);
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
