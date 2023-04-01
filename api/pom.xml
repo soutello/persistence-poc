@@ -5,7 +5,7 @@
 
 	<parent>
 		<groupId>dev.lfsoutello</groupId>
-		<artifactId>simple-api-template</artifactId>
+		<artifactId>persistence-poc</artifactId>
 		<version>1.0.0</version>
 	</parent>
 

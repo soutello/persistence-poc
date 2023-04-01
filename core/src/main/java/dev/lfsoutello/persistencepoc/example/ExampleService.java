@@ -1,6 +1,6 @@
-package dev.lfsoutello.simpleservicetemplate.example;
+package dev.lfsoutello.persistencepoc.example;
 
-import dev.lfsoutello.simpleservicetemplate.exception.ExampleNotFoundException;
+import dev.lfsoutello.persistencepoc.exception.ExampleNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package dev.lfsoutello.simpleservicetemplate.example;
+package dev.lfsoutello.persistencepoc.example;
 
 import lombok.Getter;
 import lombok.Setter;
