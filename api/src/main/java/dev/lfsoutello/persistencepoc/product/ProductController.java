@@ -10,36 +10,32 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/product")
 public class ProductController {
-    private final ProductCrudService productCrudService;
+    private final ProductBasicService productBasicService;
+
+    private final ProductStockService productStockService;
 
     @PostMapping
     public ResponseEntity<ProductDTO> create(@RequestBody ProductPayload body) {
-        log.info("[ExampleController] m=create, body={}", body);
-        return ResponseEntity.ok(productCrudService.create(body));
+        log.info("[{}] m=create, body={}", this.getClass().getSimpleName(), body);
+        return ResponseEntity.ok(productBasicService.create(body));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> read(@PathVariable Long id) {
-        log.info("[ExampleController] m=read, id={}", id);
-        return ResponseEntity.ok(productCrudService.read(id));
+        log.info("[{}] m=read, id={}", this.getClass().getSimpleName(), id);
+        return ResponseEntity.ok(productBasicService.read(id));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ProductDTO> fullUpdate(@PathVariable Long id, @RequestBody ProductPayload body) {
-        log.info("[ExampleController] m=update, id={}, body={}", id, body);
-        return ResponseEntity.ok(productCrudService.updateAll(body, id));
-    }
-
-    @PatchMapping("/{id}")
-    public ResponseEntity<ProductDTO> partialUpdate(@PathVariable Long id, @RequestBody ProductPayload body) {
-        log.info("[ExampleController] m=update, id={}, body={}", id, body);
-        return ResponseEntity.ok(productCrudService.updateNonNull(body, id));
+    @PatchMapping("/{id}/stock")
+    public ResponseEntity<ProductDTO> addToStock(@PathVariable Long id, @RequestBody AddStockPayload payload) {
+        log.info("[{}] m=addToStock, id={}, payload={}", this.getClass().getSimpleName(), id, payload);
+        return ResponseEntity.ok(productStockService.addToStock(id, payload.getAddQuantity()));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        log.info("[ExampleController] m=delete, id={}", id);
-        productCrudService.delete(id);
+        log.info("[{}] m=delete, id={}", this.getClass().getSimpleName(), id);
+        productBasicService.delete(id);
         return ResponseEntity.noContent().build();
     }
 }
