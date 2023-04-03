@@ -10,36 +10,36 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/product")
 public class ProductController {
-    private final ProductService productService;
+    private final ProductCrudService productCrudService;
 
     @PostMapping
     public ResponseEntity<ProductDTO> create(@RequestBody ProductPayload body) {
         log.info("[ExampleController] m=create, body={}", body);
-        return ResponseEntity.ok(productService.create(body));
+        return ResponseEntity.ok(productCrudService.create(body));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> read(@PathVariable Long id) {
         log.info("[ExampleController] m=read, id={}", id);
-        return ResponseEntity.ok(productService.read(id));
+        return ResponseEntity.ok(productCrudService.read(id));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ProductDTO> fullUpdate(@PathVariable Long id, @RequestBody ProductPayload body) {
         log.info("[ExampleController] m=update, id={}, body={}", id, body);
-        return ResponseEntity.ok(productService.updateAll(body, id));
+        return ResponseEntity.ok(productCrudService.updateAll(body, id));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<ProductDTO> partialUpdate(@PathVariable Long id, @RequestBody ProductPayload body) {
         log.info("[ExampleController] m=update, id={}, body={}", id, body);
-        return ResponseEntity.ok(productService.updateNonNull(body, id));
+        return ResponseEntity.ok(productCrudService.updateNonNull(body, id));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         log.info("[ExampleController] m=delete, id={}", id);
-        productService.delete(id);
+        productCrudService.delete(id);
         return ResponseEntity.noContent().build();
     }
 }

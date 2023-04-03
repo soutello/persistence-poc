@@ -26,5 +26,8 @@ public class Product {
    private BigDecimal price;
 
    @Column(nullable = false)
+   private int stock;
+
+   @Column(nullable = false)
    private boolean deleted = false;
 }

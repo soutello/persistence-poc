@@ -18,12 +18,15 @@ public class ProductDTO {
 
     private BigDecimal price;
 
+    private int stock;
+
     public static ProductDTO from(Product product) {
         return ProductDTO.builder()
             .id(product.getId())
             .name(product.getName())
             .description(product.getDescription())
             .price(product.getPrice())
+            .stock(product.getStock())
             .build();
     }
 }

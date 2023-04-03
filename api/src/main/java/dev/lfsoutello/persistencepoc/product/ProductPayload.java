@@ -15,4 +15,6 @@ public class ProductPayload implements ProductForm {
     private String description;
 
     private BigDecimal price;
+
+    private Integer stock;
 }

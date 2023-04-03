@@ -6,4 +6,5 @@ public interface ProductForm {
     String getName();
     String getDescription();
     BigDecimal getPrice();
+    Integer getStock();
 }
