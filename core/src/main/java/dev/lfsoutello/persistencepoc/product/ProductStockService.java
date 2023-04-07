@@ -15,7 +15,7 @@ public class ProductStockService {
     private final ProductRepository productRepository;
 
     @Transactional
-    public ProductDTO addToStock(long id, int quantity) {
+    public Product addToStock(long id, int quantity) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than 0");
         }
@@ -24,11 +24,11 @@ public class ProductStockService {
             .orElseThrow(ProductNotFoundException::new);
 
         product.setStock(product.getStock() + quantity);
-        return ProductDTO.from(productRepository.save(product));
+        return productRepository.save(product);
     }
 
     @Transactional
-    public ProductDTO removeFromStock(long id, int quantity) {
+    public Product removeFromStock(long id, int quantity) {
         log.info("[{}] removeFromStock: id={}, quantity={}", this.getClass().getSimpleName(), id, quantity);
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than 0");
@@ -42,6 +42,6 @@ public class ProductStockService {
         }
 
         product.setStock(product.getStock() - quantity);
-        return ProductDTO.from(productRepository.save(product));
+        return productRepository.save(product);
     }
 }

@@ -22,4 +22,10 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         log.info("m=handleExampleNotFoundException", e);
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(InvalidOrder.class)
+    protected ResponseEntity<Void> handleInvalidOrder(InvalidOrder e) {
+        log.info("m=handleInvalidOrder", e);
+        return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
+    }
 }
