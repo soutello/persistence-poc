@@ -1,6 +1,6 @@
 package dev.lfsoutello.persistencepoc.order;
 
-import dev.lfsoutello.persistencepoc.order.orderitem.OrderItemForm;
+import dev.lfsoutello.persistencepoc.pesistence.order.orderitem.OrderItemForm;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

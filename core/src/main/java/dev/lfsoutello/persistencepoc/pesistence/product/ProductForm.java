@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.product;
+package dev.lfsoutello.persistencepoc.pesistence.product;
 
 import java.math.BigDecimal;
 

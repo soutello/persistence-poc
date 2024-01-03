@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.product;
+package dev.lfsoutello.persistencepoc.pesistence.product;
 
 import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;

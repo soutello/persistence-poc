@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.order.orderitem;
+package dev.lfsoutello.persistencepoc.pesistence.order.orderitem;
 
 public interface OrderItemForm {
 

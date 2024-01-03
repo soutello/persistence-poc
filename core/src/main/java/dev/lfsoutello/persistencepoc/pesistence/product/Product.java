@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.product;
+package dev.lfsoutello.persistencepoc.pesistence.product;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.product;
+package dev.lfsoutello.persistencepoc.pesistence.product;
 
 import dev.lfsoutello.persistencepoc.exception.InsufficientStockQuantityException;
 import dev.lfsoutello.persistencepoc.exception.ProductNotFoundException;

@@ -1,6 +1,6 @@
-package dev.lfsoutello.persistencepoc.order;
+package dev.lfsoutello.persistencepoc.pesistence.order;
 
-import dev.lfsoutello.persistencepoc.order.orderitem.OrderItemDTO;
+import dev.lfsoutello.persistencepoc.pesistence.order.orderitem.OrderItemDTO;
 import lombok.Builder;
 import lombok.Getter;
 

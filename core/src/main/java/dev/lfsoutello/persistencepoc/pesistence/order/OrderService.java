@@ -1,11 +1,11 @@
-package dev.lfsoutello.persistencepoc.order;
+package dev.lfsoutello.persistencepoc.pesistence.order;
 
 import dev.lfsoutello.persistencepoc.exception.InsufficientStockQuantityException;
 import dev.lfsoutello.persistencepoc.exception.InvalidOrder;
 import dev.lfsoutello.persistencepoc.exception.ProductNotFoundException;
-import dev.lfsoutello.persistencepoc.order.orderitem.OrderItem;
-import dev.lfsoutello.persistencepoc.order.orderitem.OrderItemForm;
-import dev.lfsoutello.persistencepoc.product.ProductStockService;
+import dev.lfsoutello.persistencepoc.pesistence.order.orderitem.OrderItem;
+import dev.lfsoutello.persistencepoc.pesistence.order.orderitem.OrderItemForm;
+import dev.lfsoutello.persistencepoc.pesistence.product.ProductStockService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

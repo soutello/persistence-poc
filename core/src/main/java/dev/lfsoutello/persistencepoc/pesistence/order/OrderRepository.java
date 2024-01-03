@@ -1,4 +1,4 @@
-package dev.lfsoutello.persistencepoc.order;
+package dev.lfsoutello.persistencepoc.pesistence.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

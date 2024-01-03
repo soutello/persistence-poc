@@ -1,6 +1,6 @@
-package dev.lfsoutello.persistencepoc.order;
+package dev.lfsoutello.persistencepoc.pesistence.order;
 
-import dev.lfsoutello.persistencepoc.order.orderitem.OrderItem;
+import dev.lfsoutello.persistencepoc.pesistence.order.orderitem.OrderItem;
 import jakarta.persistence.*;
 import lombok.*;
 

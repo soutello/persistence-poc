@@ -1,8 +1,7 @@
-package dev.lfsoutello.persistencepoc.product;
+package dev.lfsoutello.persistencepoc.pesistence.product;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.math.BigDecimal;

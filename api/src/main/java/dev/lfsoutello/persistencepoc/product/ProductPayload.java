@@ -1,5 +1,6 @@
 package dev.lfsoutello.persistencepoc.product;
 
+import dev.lfsoutello.persistencepoc.pesistence.product.ProductForm;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

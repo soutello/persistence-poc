@@ -1,5 +1,8 @@
 package dev.lfsoutello.persistencepoc.product;
 
+import dev.lfsoutello.persistencepoc.pesistence.product.ProductBasicService;
+import dev.lfsoutello.persistencepoc.pesistence.product.ProductDTO;
+import dev.lfsoutello.persistencepoc.pesistence.product.ProductStockService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
